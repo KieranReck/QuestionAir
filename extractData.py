@@ -13,6 +13,8 @@ from datetime import datetime
 # Set up Selenium WebDriver with Firefox
 firefox_options = Options()
 # firefox_options.add_argument("--headless")  # Optional
+# service = Service("/snap/bin/firefox.geckodriver")  # NOTE needed if firefox installed thru snap
+# driver = webdriver.Firefox(service=service, options=firefox_options)
 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=firefox_options)
 
 try:
@@ -68,19 +70,19 @@ try:
     data = []
 
     grass_tab = driver.find_element(By.CLASS_NAME, 'grass-tab')
-    grass_elements = grass_tab.find_elements(By.CLASS_NAME, 'pollen-list')
+    grass_elements = grass_tab.find_elements(By.TAG_NAME, 'li')
     for element in grass_elements:
-        data.append([element.text])
+        data.append(element.text.split("\n"))
 
     trees_tab = driver.find_element(By.CLASS_NAME, 'trees-tab')
-    trees_elements = trees_tab.find_elements(By.CLASS_NAME, 'pollen-list')
+    trees_elements = trees_tab.find_elements(By.TAG_NAME, 'li')
     for element in trees_elements:
-        data.append([element.text])
+        data.append(element.text.split("\n"))
 
     weeds_tab = driver.find_element(By.CLASS_NAME, 'weeds-tab')
-    weeds_elements = weeds_tab.find_elements(By.CLASS_NAME, 'pollen-list')
+    weeds_elements = weeds_tab.find_elements(By.TAG_NAME, 'li')
     for element in weeds_elements:
-        data.append([element.text])
+        data.append(element.text.split("\n"))
 
     # print(weeds)
     # [print(element.text) for element in weeds_elements]

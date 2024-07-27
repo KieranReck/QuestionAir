@@ -91,14 +91,17 @@ try:
    
     # Generate the filename with current date and time
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    filename = f'pollen_data_{timestamp}.csv'
+    data_folder = 'data'
+    filename = os.path.join(data_folder, f'pollen_data_{timestamp}.csv')
+
+    # Ensure the data folder exists
+    os.makedirs(data_folder, exist_ok=True)
 
     # Check if the file already exists
     if os.path.exists(filename):
         print(f"Filename already exists, waiting 1 seconds")
         time.sleep(1)
         filename = f'pollen_data_{timestamp}.csv'
-
 
     # Write data to CSV file
     with open(filename, mode='w', newline='') as csvfile:

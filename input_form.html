@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="document.location='home.html'">Home</button> 
+    <h1>QuestionAir</h1>
+    <h4>Count Pollen Track Symptoms ...Profit?</h4>
+    <h2>Tell Me Your Troubles:</h2>
+    <form method="post" action="data_entry" target="_self" autocomplete="off" name="pollen_form">
+        <label for="date_in_question">Date In Question:</label>
+        <br>
+        <input type="date" id="date_in_question" name="date_in_question" required>
+        <br>
+        <br>
+        <label for="time_of_day">When did symptoms start?:</label>
+        <br>
+        <input  type="radio" id="morning" name="time_of_day" value="morning" required>
+        <label for="morning">Morning</label>
+        <br>
+        <input  type="radio" id="afternoon" name="time_of_day" value="afternoon" required>
+        <label for="morning">Afternoon</label>
+        <br>
+        <input  type="radio" id="evening" name="time_of_day" value="evening" required>
+        <label for="morning">Evening</label>
+        <br>
+        <br>
+        <label for="symptoms">What were the symptoms?:</label>
+        <br>
+        <input type="checkbox" id="symptom1" name="symptom1" value="sneezing">
+        <label for="symptom1">Sneezing</label>
+        <br>
+        <input type="checkbox" id="symptom2" name="symptom2" value="runny_eyes">
+        <label for="symptom2">Runny Eyes</label>
+        <br>
+        <input type="checkbox" id="symptom3" name="symptom3" value="itchy_eyes">
+        <label for="symptom3">Itchy Eyes</label>
+        <br>
+        <input type="checkbox" id="symptom4" name="symptom4" value="irritated_sinus">
+        <label for="symptom2">Irritated Sinus</label>
+        <br>
+        <input type="checkbox" id="symptom5" name="symptom5" value="runny_nose">
+        <label for="symptom2">Runny Nose</label>
+        <br>
+        <input type="checkbox" id="symptom6" name="symptom6" value="wheezing">
+        <label for="symptom2">Wheezing</label>
+        <br>
+        <br>
+        <label for="outdoors">Did your symptoms occur outdoors?:</label>
+        <br>
+        <input  type="radio" id="outdoors_yes" name="outdoors" value="yes" required>
+        <label for="yes">Yes</label>
+        <br>
+        <input  type="radio" id="outdoors_no" name="outdoors" value="no" required>
+        <label for="yes">No</label>
+        <br>
+        <input  type="radio" id="outdoors_dont_know" name="outdoors" value="dont_know" required>
+        <label for="yes">Dont Know</label>
+        <br>
+        <br>
+        <label for="indoors">Did your symptoms occur indoors?:</label>
+        <br>
+        <input  type="radio" id="indoors_yes" name="indoors" value="yes" required>
+        <label for="yes">Yes</label>
+        <br>
+        <input  type="radio" id="indoors_no" name="indoors" value="no" required>
+        <label for="yes">No</label>
+        <br>
+        <input  type="radio" id="indoors_dont_know" name="indoors" value="dont_know" required>
+        <label for="yes">Dont Know</label>
+        <br>
+        <br>
+        <label for="treatments">What treatments did you try?:</label>
+        <br>
+        <input type="checkbox" id="treatment1" name="treatment1" value="hayfever_tablet">
+        <label for="treatment1">Hayfever Tablet</label>
+        <br>
+        <input type="checkbox" id="treatment2" name="treatment2" value="mometasone">
+        <label for="treatment2">Mometasone Nose Spray</label>
+        <br>
+        <input type="checkbox" id="treatment3" name="treatment3" value="tea">
+        <label for="treatment3">Tea</label>
+        <br>
+        <input type="checkbox" id="treatment4" name="treatment4" value="nothing">
+        <label for="treatment4">Nothing, I went rawdog</label>
+        <br>
+        <br>
+        <br>
+        <label for="indoors">Did your treatments stop all symptoms?:</label>
+        <br>
+        <input  type="radio" id="cure_yes" name="cure" value="yes" required>
+        <label for="yes">Yes</label>
+        <br>
+        <input  type="radio" id="indoors_no" name="cure" value="no" required>
+        <label for="yes">No</label>
+        <br>
+        <input  type="radio" id="indoors_dont_know" name="cure" value="dont_know" required>
+        <label for="yes">Dont Know</label>
+        <br>
+        <br>
+        <label for="cambridge">Did your go anywhere other than cambridge?:</label>
+        <br>
+        <input  type="radio" id="cambridge_yes" name="cambridge" value="yes" required>
+        <label for="yes">Yes</label>
+        <br>
+        <input  type="radio" id="cambridge_no" name="cambridge" value="no" required>
+        <label for="yes">No</label>
+        <br>
+        <br>
+        <label for="include">Should Today's Data be Included In Analysis?</label>
+        <br>
+        <!-- <input type="radio" id="choose_one" name="include" value="choose_one">
+        <label for="plz_select">Please Choose One</label>
+        <br> -->
+        <input type="radio" id="include_yes" name="include" value="include_yes" required>
+        <label for="include_yes">Include</label>
+        <br>
+        <input type="radio" id="include_no" name="include" value="include_no" required>
+        <label for="include_yes">Do Not Include</label>
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="alert('Are you sure you want to submit?')">
+        <input type="reset" value="Reset">
+    </form>
+    <br>
+    <img src="bad-meme.jpg">
+</body>
+</html>

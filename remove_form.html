@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="document.location='home.html'">Home</button> 
+    <h1>QuestionAir</h1>
+    <h4>Count Pollen Track Symptoms ...Profit?</h4>
+    <h2>So, you need to remove a period from the analysis?:</h2>
+    <form method="post" action="data_entry" target="_self" autocomplete="off" name="pollen_form">
+        <label for="period_start">First Day (Inclusive):</label>
+        <br>
+        <input type="date" id="period_start" name="period_start" required>
+        <br>
+        <br>
+        <label for="period_end">Last Day (Inclusive):</label>
+        <br>
+        <input type="date" id="period_end" name="period_end" required>
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="alert('Are you sure you want to submit?')">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

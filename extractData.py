@@ -92,7 +92,7 @@ try:
     # Generate the filename with current date and time
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     data_folder = 'data'
-    filename = os.path.join(data_folder, f'pollen_data_{timestamp}.csv')
+    filename = os.path.join(data_folder, f'{timestamp}_pollen_data.csv')
 
     # Ensure the data folder exists
     os.makedirs(data_folder, exist_ok=True)
